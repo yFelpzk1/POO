@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\Exercicio1.csproj": {}
+    "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula19\\Exercicio1\\Exercicio1.csproj": {}
   },
   "projects": {
-    "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\Exercicio1.csproj": {
+    "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula19\\Exercicio1\\Exercicio1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\Exercicio1.csproj",
+        "projectUniqueName": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula19\\Exercicio1\\Exercicio1.csproj",
         "projectName": "Exercicio1",
-        "projectPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\Exercicio1.csproj",
+        "projectPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula19\\Exercicio1\\Exercicio1.csproj",
         "packagesPath": "C:\\Users\\jefer\\.nuget\\packages\\",
-        "outputPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\obj\\",
+        "outputPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula19\\Exercicio1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jefer\\AppData\\Roaming\\NuGet\\NuGet.Config",
