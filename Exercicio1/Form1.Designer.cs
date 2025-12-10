@@ -29,280 +29,216 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            txtNomeCachorro = new TextBox();
             label2 = new Label();
-            cboTipoMidia = new ComboBox();
             label3 = new Label();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
+            txtPesoCachorro = new TextBox();
+            txtRacaCachorro = new TextBox();
             btnCadastrar = new Button();
-            txtApresentador = new TextBox();
-            txtArtista = new TextBox();
-            txtDuracao = new TextBox();
-            txtTitulo = new TextBox();
-            label5 = new Label();
+            btnImprimir = new Button();
+            txtHabitat = new TextBox();
+            txtPesoPeixe = new TextBox();
             label4 = new Label();
-            tabPage2 = new TabPage();
-            btnExibirM = new Button();
-            btnExibir = new Button();
-            dgvExibir = new DataGridView();
-            tabPage3 = new TabPage();
-            btnRemover = new Button();
-            txtRemover = new TextBox();
+            label5 = new Label();
+            txtNomePeixe = new TextBox();
             label6 = new Label();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvExibir).BeginInit();
-            tabPage3.SuspendLayout();
+            label7 = new Label();
+            label8 = new Label();
+            btnCadastrarPeixe = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 25);
+            label1.Location = new Point(56, 109);
             label1.Name = "label1";
-            label1.Size = new Size(41, 15);
+            label1.Size = new Size(43, 15);
             label1.TabIndex = 0;
-            label1.Text = "Titulo:";
+            label1.Text = "Nome:";
+            // 
+            // txtNomeCachorro
+            // 
+            txtNomeCachorro.Location = new Point(105, 101);
+            txtNomeCachorro.Name = "txtNomeCachorro";
+            txtNomeCachorro.Size = new Size(188, 23);
+            txtNomeCachorro.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(32, 136);
+            label2.Location = new Point(56, 164);
             label2.Name = "label2";
-            label2.Size = new Size(83, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Tipo de Midia:";
-            // 
-            // cboTipoMidia
-            // 
-            cboTipoMidia.AutoCompleteCustomSource.AddRange(new string[] { "Musica", "Podcast" });
-            cboTipoMidia.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboTipoMidia.FormattingEnabled = true;
-            cboTipoMidia.Items.AddRange(new object[] { "Musica", "Podcast" });
-            cboTipoMidia.Location = new Point(121, 133);
-            cboTipoMidia.Name = "cboTipoMidia";
-            cboTipoMidia.Size = new Size(151, 23);
-            cboTipoMidia.TabIndex = 2;
-            cboTipoMidia.SelectedIndexChanged += cboTipoMidia_SelectedIndexChanged;
+            label2.Size = new Size(35, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Peso:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(35, 75);
+            label3.Location = new Point(56, 228);
             label3.Name = "label3";
-            label3.Size = new Size(54, 15);
+            label3.Size = new Size(35, 15);
             label3.TabIndex = 3;
-            label3.Text = "Duração:";
+            label3.Text = "Raça:";
             // 
-            // tabControl1
+            // txtPesoCachorro
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(41, 31);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(706, 394);
-            tabControl1.TabIndex = 4;
+            txtPesoCachorro.Location = new Point(105, 156);
+            txtPesoCachorro.Name = "txtPesoCachorro";
+            txtPesoCachorro.Size = new Size(188, 23);
+            txtPesoCachorro.TabIndex = 4;
             // 
-            // tabPage1
+            // txtRacaCachorro
             // 
-            tabPage1.Controls.Add(btnCadastrar);
-            tabPage1.Controls.Add(txtApresentador);
-            tabPage1.Controls.Add(txtArtista);
-            tabPage1.Controls.Add(txtDuracao);
-            tabPage1.Controls.Add(txtTitulo);
-            tabPage1.Controls.Add(label5);
-            tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(cboTipoMidia);
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(698, 366);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Cadastro";
-            tabPage1.UseVisualStyleBackColor = true;
+            txtRacaCachorro.Location = new Point(105, 220);
+            txtRacaCachorro.Name = "txtRacaCachorro";
+            txtRacaCachorro.Size = new Size(188, 23);
+            txtRacaCachorro.TabIndex = 5;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(537, 280);
+            btnCadastrar.Location = new Point(115, 283);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(135, 65);
-            btnCadastrar.TabIndex = 10;
+            btnCadastrar.Size = new Size(129, 51);
+            btnCadastrar.TabIndex = 6;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
-            // txtApresentador
+            // btnImprimir
             // 
-            txtApresentador.Location = new Point(121, 238);
-            txtApresentador.Name = "txtApresentador";
-            txtApresentador.Size = new Size(164, 23);
-            txtApresentador.TabIndex = 9;
+            btnImprimir.Location = new Point(281, 376);
+            btnImprimir.Name = "btnImprimir";
+            btnImprimir.Size = new Size(139, 62);
+            btnImprimir.TabIndex = 7;
+            btnImprimir.Text = "Imprimir";
+            btnImprimir.UseVisualStyleBackColor = true;
+            btnImprimir.Click += btnImprimir_Click;
             // 
-            // txtArtista
+            // txtHabitat
             // 
-            txtArtista.Location = new Point(85, 182);
-            txtArtista.Name = "txtArtista";
-            txtArtista.Size = new Size(164, 23);
-            txtArtista.TabIndex = 8;
+            txtHabitat.Location = new Point(472, 228);
+            txtHabitat.Name = "txtHabitat";
+            txtHabitat.Size = new Size(188, 23);
+            txtHabitat.TabIndex = 13;
             // 
-            // txtDuracao
+            // txtPesoPeixe
             // 
-            txtDuracao.Location = new Point(95, 67);
-            txtDuracao.Name = "txtDuracao";
-            txtDuracao.Size = new Size(164, 23);
-            txtDuracao.TabIndex = 7;
-            // 
-            // txtTitulo
-            // 
-            txtTitulo.Location = new Point(79, 17);
-            txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(228, 23);
-            txtTitulo.TabIndex = 6;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(32, 246);
-            label5.Name = "label5";
-            label5.Size = new Size(81, 15);
-            label5.TabIndex = 5;
-            label5.Text = "Apresentador:";
+            txtPesoPeixe.Location = new Point(472, 164);
+            txtPesoPeixe.Name = "txtPesoPeixe";
+            txtPesoPeixe.Size = new Size(188, 23);
+            txtPesoPeixe.TabIndex = 12;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(35, 190);
+            label4.Location = new Point(409, 236);
             label4.Name = "label4";
-            label4.Size = new Size(44, 15);
-            label4.TabIndex = 4;
-            label4.Text = "Artista:";
+            label4.Size = new Size(49, 15);
+            label4.TabIndex = 11;
+            label4.Text = "Hibatat:";
             // 
-            // tabPage2
+            // label5
             // 
-            tabPage2.Controls.Add(btnExibirM);
-            tabPage2.Controls.Add(btnExibir);
-            tabPage2.Controls.Add(dgvExibir);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(698, 366);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Listar";
-            tabPage2.UseVisualStyleBackColor = true;
+            label5.AutoSize = true;
+            label5.Location = new Point(423, 172);
+            label5.Name = "label5";
+            label5.Size = new Size(35, 15);
+            label5.TabIndex = 10;
+            label5.Text = "Peso:";
             // 
-            // btnExibirM
+            // txtNomePeixe
             // 
-            btnExibirM.Location = new Point(591, 180);
-            btnExibirM.Name = "btnExibirM";
-            btnExibirM.Size = new Size(89, 110);
-            btnExibirM.TabIndex = 2;
-            btnExibirM.Text = "Exibir MessageBox";
-            btnExibirM.UseVisualStyleBackColor = true;
-            btnExibirM.Click += btnExibirM_Click;
-            // 
-            // btnExibir
-            // 
-            btnExibir.Location = new Point(591, 20);
-            btnExibir.Name = "btnExibir";
-            btnExibir.Size = new Size(89, 110);
-            btnExibir.TabIndex = 1;
-            btnExibir.Text = "Exibir";
-            btnExibir.UseVisualStyleBackColor = true;
-            btnExibir.Click += btnExibir_Click;
-            // 
-            // dgvExibir
-            // 
-            dgvExibir.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvExibir.Location = new Point(23, 20);
-            dgvExibir.Name = "dgvExibir";
-            dgvExibir.Size = new Size(550, 328);
-            dgvExibir.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(btnRemover);
-            tabPage3.Controls.Add(txtRemover);
-            tabPage3.Controls.Add(label6);
-            tabPage3.Location = new Point(4, 24);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(698, 366);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Remoção";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // btnRemover
-            // 
-            btnRemover.Location = new Point(531, 20);
-            btnRemover.Name = "btnRemover";
-            btnRemover.Size = new Size(137, 105);
-            btnRemover.TabIndex = 2;
-            btnRemover.Text = "Remover";
-            btnRemover.UseVisualStyleBackColor = true;
-            btnRemover.Click += btnRemover_Click;
-            // 
-            // txtRemover
-            // 
-            txtRemover.Location = new Point(204, 20);
-            txtRemover.Name = "txtRemover";
-            txtRemover.Size = new Size(178, 23);
-            txtRemover.TabIndex = 1;
+            txtNomePeixe.Location = new Point(472, 109);
+            txtNomePeixe.Name = "txtNomePeixe";
+            txtNomePeixe.Size = new Size(188, 23);
+            txtNomePeixe.TabIndex = 9;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(23, 28);
+            label6.Location = new Point(423, 117);
             label6.Name = "label6";
-            label6.Size = new Size(175, 15);
-            label6.TabIndex = 0;
-            label6.Text = "Digite o titulo que seja remover:";
+            label6.Size = new Size(43, 15);
+            label6.TabIndex = 8;
+            label6.Text = "Nome:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(530, 49);
+            label7.Name = "label7";
+            label7.Size = new Size(45, 21);
+            label7.TabIndex = 14;
+            label7.Text = "Peixe";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F);
+            label8.Location = new Point(144, 49);
+            label8.Name = "label8";
+            label8.Size = new Size(74, 21);
+            label8.TabIndex = 15;
+            label8.Text = "Cachorro";
+            // 
+            // btnCadastrarPeixe
+            // 
+            btnCadastrarPeixe.Location = new Point(497, 283);
+            btnCadastrarPeixe.Name = "btnCadastrarPeixe";
+            btnCadastrarPeixe.Size = new Size(129, 51);
+            btnCadastrarPeixe.TabIndex = 16;
+            btnCadastrarPeixe.Text = "Cadastrar";
+            btnCadastrarPeixe.UseVisualStyleBackColor = true;
+            btnCadastrarPeixe.Click += btnCadastrarPeixe_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(tabControl1);
+            ClientSize = new Size(722, 450);
+            Controls.Add(btnCadastrarPeixe);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(txtHabitat);
+            Controls.Add(txtPesoPeixe);
+            Controls.Add(label4);
+            Controls.Add(label5);
+            Controls.Add(txtNomePeixe);
+            Controls.Add(label6);
+            Controls.Add(btnImprimir);
+            Controls.Add(btnCadastrar);
+            Controls.Add(txtRacaCachorro);
+            Controls.Add(txtPesoCachorro);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(txtNomeCachorro);
+            Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvExibir).EndInit();
-            tabPage3.ResumeLayout(false);
-            tabPage3.PerformLayout();
+            Text = "PetShop";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
+        private TextBox txtNomeCachorro;
         private Label label2;
-        private ComboBox cboTipoMidia;
         private Label label3;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TextBox txtApresentador;
-        private TextBox txtArtista;
-        private TextBox txtDuracao;
-        private TextBox txtTitulo;
-        private Label label5;
-        private Label label4;
-        private TabPage tabPage2;
+        private TextBox txtPesoCachorro;
+        private TextBox txtRacaCachorro;
         private Button btnCadastrar;
-        private Button btnExibir;
-        private DataGridView dgvExibir;
-        private TabPage tabPage3;
-        private Button btnRemover;
-        private TextBox txtRemover;
+        private Button btnImprimir;
+        private TextBox txtHabitat;
+        private TextBox txtPesoPeixe;
+        private Label label4;
+        private Label label5;
+        private TextBox txtNomePeixe;
         private Label label6;
-        private Button btnExibirM;
+        private Label label7;
+        private Label label8;
+        private Button btnCadastrarPeixe;
     }
 }

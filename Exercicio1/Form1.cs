@@ -1,107 +1,115 @@
-using System.Drawing.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static Exercicio1.Enums;
 
 namespace Exercicio1
 {
     public partial class Form1 : Form
     {
+        private Cachorro cachorro;
+        private Peixe peixe;
 
-        private Playlist playlist = new Playlist();
         public Form1()
         {
             InitializeComponent();
-
-        }
-
-        private void cboTipoMidia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string tipo = cboTipoMidia.SelectedItem.ToString();
-
-            if (tipo == "Musica")
-            {
-                txtArtista.Enabled = true;
-                txtApresentador.Enabled = false;
-                txtApresentador.Clear();
-            }
-            else if (tipo == "Podcast")
-            {
-                txtApresentador.Enabled = true;
-                txtArtista.Enabled = false;
-                txtArtista.Clear();
-            }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             try
             {
-                string titulo = txtTitulo.Text;
-                int duracao = int.Parse(txtDuracao.Text);
+                string nome = txtNomeCachorro.Text;
+                double peso;
 
-                if (cboTipoMidia.SelectedItem == null)
+                if (!double.TryParse(txtPesoCachorro.Text, out  peso))
                 {
-                    MessageBox.Show("Selecione um tipo de mídia.");
+                    MessageBox.Show("Peso Inválido. Digite um número.");
                     return;
                 }
 
-                if (cboTipoMidia.SelectedItem.ToString() == "Musica")
+                string racaTexto = txtRacaCachorro.Text?.Trim();
+
+                if (string.IsNullOrWhiteSpace(racaTexto))
                 {
-                    string artista = txtArtista.Text;
-                    Musica m = new Musica(titulo, duracao, artista);
-                    playlist.AdicionarMidia(m);
-                }
-                else if (cboTipoMidia.SelectedItem.ToString() == "Podcast")
-                {
-                    string apresentador = txtApresentador.Text;
-                    Podcast p = new Podcast(titulo, duracao, apresentador);
-                    playlist.AdicionarMidia(p);
+                    MessageBox.Show("Informe a raça: ViraLata, Poodle, Boxer, Pastor ou Labrador.");
+                    return;
                 }
 
-                MessageBox.Show("Midia adicionada à playlist!");
-
-                txtTitulo.Clear();
-                txtDuracao.Clear();
-                txtArtista.Clear();
-                txtApresentador.Clear();
+                if (Enum.TryParse<TipoRaca>(racaTexto, true, out var raca))
+                {
+                    cachorro = new Cachorro(nome, peso, raca);
+                    MessageBox.Show("Cachorro cadastrado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Raça Invalida. Use: ViraLata, Poodle, Boxer, Pastor ou Labrador.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro inesperado" + ex.Message);
             }
         }
 
-        private void btnExibir_Click(object sender, EventArgs e)
+        private void btnCadastrarPeixe_Click(object sender, EventArgs e)
         {
-            var dados = playlist.ObterMidias()
-            .Select(m => new
-        {
-            Titulo = m.Titulo,
-            Duracao = m.Duracao,
-            Tipo = m is Musica ? "Música" : "Podcast",
-            ArtistaOuApresentador = m is Musica ? ((Musica)m).Artista : ((Podcast)m).Apresentador,
-            Reproducao = m.Reproduzir()
-        }).ToList();
-
-            dgvExibir.DataSource = null;
-            dgvExibir.DataSource = dados;
-        }
-
-        private void btnExibirM_Click(object sender, EventArgs e)
-        {
-            playlist.ExibirPlaylist();
-        }
-
-        private void btnRemover_Click(object sender, EventArgs e)
-        {
-            string titulo = txtRemover.Text;
-
-            if (string.IsNullOrWhiteSpace(titulo))
+            try
             {
-                MessageBox.Show("Digite um titulo para remover!");
-                return;
+                string nome = txtNomePeixe.Text;
+                double peso;
+
+                if (!double.TryParse(txtPesoPeixe.Text, out peso))
+                {
+                    MessageBox.Show("Peso Inválido. Digite um número.");
+                    return;
+                }
+
+                string tipoHabitat = txtHabitat.Text?.Trim();
+
+                if (string.IsNullOrWhiteSpace(txtHabitat.Text))
+                {
+                    MessageBox.Show("Informe a raça: ViraLata, Poodle, Boxer, Pastor ou Labrador.");
+                    return;
+                }
+
+                if (Enum.TryParse<TipoHabitat>(txtHabitat.Text, true, out var habitat))
+                {
+                    peixe = new Peixe(nome, peso, habitat);
+                    MessageBox.Show("Cachorro cadastrado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Habitat Invalido. Use: AguaDoce,Salgada,Ornamental.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro inesperado" + ex.Message);
             }
 
-            playlist.RemoverMidia(titulo);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            string dados = "";
+
+            if (cachorro != null)
+            {
+                dados += "Cachorro: \n" + cachorro.ImprimeDados() + "\n\n";
+            }
+            else
+            {
+                dados += "Cachorro não encontrado. \n\n";
+            }
+
+            if(peixe != null)
+            {
+                dados += "Peixe:\n" + peixe.ImprimeDados() + "\n\n";
+            }
+            else
+            {
+                dados += "Peixe não encontrado";
+            }
+
+            MessageBox.Show(dados, "Dados dos animais");
         }
     }
 }

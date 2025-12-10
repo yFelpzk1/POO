@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Revisao2Prova\\Exercicio1\\Exercicio1.csproj",
+      "projectUniqueName": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\Exercicio1.csproj",
       "projectName": "Exercicio1",
-      "projectPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Revisao2Prova\\Exercicio1\\Exercicio1.csproj",
+      "projectPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\Exercicio1.csproj",
       "packagesPath": "C:\\Users\\jefer\\.nuget\\packages\\",
-      "outputPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Revisao2Prova\\Exercicio1\\obj\\",
+      "outputPath": "C:\\yFelpzk1\\TSI\\Programação Orientada a Objetos\\Aula17\\Exercicio1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jefer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
